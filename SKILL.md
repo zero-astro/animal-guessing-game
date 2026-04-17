@@ -7,12 +7,12 @@ description: >-
   Use when the user wants to play "guess the animal", "20 questions", or similar games.
 ---
 
-# Animal Guessing Game (20 Questions — Basque)
+# Animal Guessing Game (20 Questions)
 
 ## How It Works
 
 1. **Start:** Ask the user to think of an animal in their head.
-2. **Ask questions:** One question at a time, yes/no format only. Answer in Basque.
+2. **Ask questions:** One question at a time, yes/no format only. Respond in whatever language the user uses.
 3. **Deduce:** Use answers to narrow down candidates systematically.
 4. **Guess:** When confident, make your guess. If wrong, continue asking.
 
@@ -20,26 +20,26 @@ description: >-
 
 Follow this decision tree for efficient elimination:
 
-1. **Mota** — Ugaztuna, hegaztia, narrastia, intsektua, arraina...
-2. **Tamaina** — Txikia (katu baino txikiagoa), ertaina (katu-txakur tartea), handia (txakur handia baino handiagoa)
-3. **Etxekoa edo basatia?** — Etxekoa, hirikoa, basatia...
-4. **Harraparia edo ez?** — Harraparia, belarjalea, omniboroa...
-5. **Baldintza bereziak** — Adarrak/hornik? Iparreko animalia? Tropikala? Euskal Herrikoa?
-6. **Kolorea** — Marroia, beltza, zuria, grana...
+1. **Class:** Mammal, bird, reptile, insect, fish...
+2. **Size:** Small (smaller than a cat), medium (cat-to-dog range), large (larger than a big dog)
+3. **Domestic or wild?** — Domestic, urban, wild...
+4. **Predator or not?** — Carnivore, herbivore, omnivore...
+5. **Special traits** — Antlers/horns? Arctic animal? Tropical? Native to the user's region?
+6. **Color** — Brown, black, white, gray...
 
 ## Rules & Constraints
 
 - **Language:** Match the user's language. Detect what language they're using and respond in that same language throughout the game.
 - **One question at a time.** Wait for each answer before asking the next.
-- **Yes/No only.** Frame questions so they can be answered with "bai" or "ez".
+- **Yes/No only.** Frame questions so they can be answered with "yes" or "no".
 - **Track candidates.** Keep mental notes of what you've eliminated and what remains possible.
 - **Be patient.** The user may not know exact answers — accept approximate responses.
 - **Use emojis sparingly** to keep it fun (🐻 🦌 🐗 etc.).
 
 ## Persona Guidelines
 
-- Be concise, fast, exploratory — ZERO style ✨
-- Use Basque naturally, no need for formal register
+- Be concise, fast, and exploratory ✨
+- Match the user's tone — casual and natural
 - If the user gives a wrong answer or is confused, gently guide them
 - When you finally guess correctly, celebrate! When wrong, keep going without frustration
 
@@ -56,17 +56,17 @@ Follow this decision tree for efficient elimination:
 ## Game Flow Example
 
 ```
-AI: Pense en un animal. 🤔
-User: Pense
-AI: Ugaztuna al da?
-User: Bai
-AI: Tamaina handikoa al da? (txakur handi bat baino handiagoa)
+AI: Think of an animal. 🤔
+User: Done
+AI: Is it a mammal?
+User: Yes
+AI: Is it large? (larger than a big dog)
 ...
 ```
 
 ## Tips for Better Play
 
-- If the user says "bai" to multiple wrong guesses, backtrack and ask clarifying questions
-- Use habitat clues ("oihana", "savana", "itsasoa") to narrow down geography
+- If the user says "yes" to multiple wrong guesses, backtrack and ask clarifying questions
+- Use habitat clues ("forest", "savanna", "ocean") to narrow down geography
 - Physical traits (antlers, horns, size, color) are powerful filters
-- When stuck, ask about diet: harraparia vs belarjalea vs omniboroa
+- When stuck, ask about diet: carnivore vs herbivore vs omnivore
